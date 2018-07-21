@@ -39,6 +39,16 @@ body {
     font-weight: bold;
 }
 
+.tuite .creator a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tuite .creator a:hover {
+    text-decoration: underline;
+    color: #1DA1F2;
+}
+
 /* Menu */
 
 .menu-wrapper {
@@ -135,10 +145,9 @@ input {
 
 .user-profile .user-info {
     margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
 }
 
 .user-profile .pic-column .profile-picture {

@@ -7,11 +7,7 @@
     </form>
 
     {% for tuite in tuites %}
-    <div class="tuite">
-        <p class="creator">@{{ tuite.creator }}</p>
-        <p>{{ tuite.content }}</p>
-        <p class="date">{{ tuite.date_created }}</p>
-    </div>
+        {% include 'includes/tuite.html' %}
     {% empty %}
         {% if query %}
         <h4 class="not-found">Nenhum Tuite foi achado com o termo "{{ query }}" :(</h4>

@@ -19,12 +19,9 @@
     </div>
     <div class="profile-section">
         <section class="home-tuites">
-            <h3>Tuites by @{{ user.username }}</h3>
+            <h3>Tuites de @{{ user.username }}</h3>
             {% for tuite in user.tuites.all %}
-                <div class="tuite">
-                    <p>{{ tuite.content }}</p>
-                    <p class="date">{{ tuite.date_created }}</p>
-                </div>
+                {% include 'includes/tuite.html' %}
             {% endfor %}
         </section>
     </div>

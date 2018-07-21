@@ -1,0 +1,9 @@
+<div class="tuite">
+    <p class="creator">
+        <a href="{% url 'users:profile' tuite.creator.id %}">@{{ tuite.creator }}</a>
+    </p>
+    <p>{{ tuite.content }}</p>
+    <p class="date">
+        <a href="{% url 'tuites:tuite' tuite.pk %}">{{ tuite.date_created }}</a>
+    </p>
+</div>

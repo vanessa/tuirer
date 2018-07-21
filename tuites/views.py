@@ -44,3 +44,9 @@ class SearchTuiteView(generic.ListView):
         if query is not None:
             return Tuite.objects.search(query)
         return Tuite.objects.none()
+
+
+class SingleTuiteView(generic.DetailView):
+    template_name = 'single_tuite.html'
+    model = Tuite
+    context_object_name = 'tuite'
