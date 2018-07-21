@@ -1,0 +1,19 @@
+<div class="menu-wrapper">
+    <div class="menu-inner">
+        <div class="site-name">
+            <a href="{% url 'core:home' %}">Tuirer</a>
+        </div>
+        <nav>
+            <a href="{% url 'core:home' %}">Início</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'tuites:post' %}">Postar tuite</a>
+            <a href="{% url 'tuites:list' %}">Tuites</a>
+            <a href="{% url 'users:profile' user.pk %}">Meu Perfil</a>
+            <a href="#">Buscar</a>
+            <a href="{% url 'users:logout' %}">Sair</a>
+            {% else %}
+            <a href="{% url 'users:login' %}">Entrar</a>
+            {% endif %}
+        </nav>
+    </div>
+</div>

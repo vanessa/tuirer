@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>@{{ user.username }}</h2>
+Entrou em {{ user.created_at }}
+<div class="profile-section">
+    <section class="home-tuites">
+        <h3>Tuites by @{{ user.username }}</h3>
+        {% for tuite in user.tuites.all %}
+            <div class="tuite">
+                <p>{{ tuite.content }}</p>
+                <p class="date">{{ tuite.date_created }}</p>
+            </div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+
+<head>
+  <title>Tuirer</title>
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'includes/menu.html' %}
+  <div class="container">
+    {% block body %}{% endblock %}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h2 class="site-header">Bem-vindo ao Tuirer!</h2>
+    <p>Este é o lugar onde você pode jogar indireta pro crush, ler fake news e conversar com si mesmo.</p>
+    
+    <section class="home-tuites">
+        <h3>Últimos 2 tuites</h3>
+        {% for tuite in tuites %}
+            <div class="tuite">
+                <p class="creator">@{{ tuite.creator }}</p>
+                <p>{{ tuite.content }}</p>
+                <p class="date">{{ tuite.date_created }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

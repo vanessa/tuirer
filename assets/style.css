@@ -1,0 +1,68 @@
+body {
+    background: #f0f0f0;
+    font-size: 1.3em;
+    font-family: "Source Sans Pro", "Segoe UI", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.tuite {
+    padding: 10px;
+    background: #fff;
+    margin: 15px 0;
+}
+
+.tuite p {
+    margin: 0 0 5px;
+}
+
+.tuite .date {
+    font-size: .8em;
+    color: rgb(151, 151, 151);
+}
+
+.tuite .creator {
+    font-size: .8em;
+    color: #666;
+    font-weight: bold;
+}
+
+.menu-wrapper {
+    background: #1DA1F2;
+    padding: 15px;
+    color: #fff;
+}
+
+.menu-inner {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.menu-inner .site-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+
+.menu-inner .site-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-inner nav a {
+    color: #fff;
+    padding: 0 15px;
+}
