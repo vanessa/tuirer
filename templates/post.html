@@ -14,9 +14,9 @@
         {% endfor %}
     {% endif %}
 
-    <form method="post" class="post-tuite-form">
+    <form method="post" class="two-column-form">
         {% csrf_token %}
-        {% render_field form.content class="content" placeholder="O que você está pensando?" %}
+        {% render_field form.content class="big-input" placeholder="O que você está pensando?" %}
         {% render_field form.creator %}
         <input type="submit" value="Postar!">
     </form>

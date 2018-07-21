@@ -45,6 +45,7 @@ body {
     background: #1DA1F2;
     padding: 15px;
     color: #fff;
+    margin-bottom: 20px;
 }
 
 .menu-inner {
@@ -88,23 +89,27 @@ body {
     margin: 15px 0;
 }
 
-.post-tuite-form {
+.two-column-form {
     display: grid;
     grid-template-columns: 70% 30%;
 }
 
-.post-tuite-form .content {
+.two-column-form .big-input {
     padding: 15px;
     font-size: 1.2em;
 }
 
-.post-tuite-form input[type="submit"] {
+.two-column-form input[type="submit"] {
     font-size: 1.1em;
     cursor: pointer;
     padding: 15px;
     background: #1DA1F2;
     color: #fff;
     border: 0;
+}
+
+input {
+    font-family: inherit;
 }
 
 /* Mensagens */
@@ -121,6 +126,7 @@ body {
 }
 
 /* Perfil do usuário */
+
 .user-profile .stats {
     margin: 10px 0;
     font-size: .9em;
@@ -140,4 +146,12 @@ body {
     height: 150px;
     background-size: cover;
     border-radius: 50%;
+}
+
+/* Busca */
+
+.not-found {
+    font-weight: 600;
+    text-align: center; 
+    font-size: 1.2em;
 }
