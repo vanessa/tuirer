@@ -1,17 +1,32 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h2>@{{ user.username }}</h2>
-Entrou em {{ user.created_at }}
-<div class="profile-section">
-    <section class="home-tuites">
-        <h3>Tuites by @{{ user.username }}</h3>
-        {% for tuite in user.tuites.all %}
-            <div class="tuite">
-                <p>{{ tuite.content }}</p>
-                <p class="date">{{ tuite.date_created }}</p>
+<div class="user-profile">
+    <div class="user-info">
+        <div class="info-column">
+            <h2>@{{ user.username }}</h2>
+            <div class="stats">
+                {{ user.followers_count }} seguidor{{ user.followers_count|pluralize:"es" }} |
+                seguindo {{ user.following_count }}
             </div>
-        {% endfor %}
-    </section>
+            <div class="joined-date">
+                Entrou em {{ user.created_at }}
+            </div>
+        </div>
+        <div class="pic-column">
+            <div class="profile-picture" style="background-image: url('{{ user.picture.url }}');"></div>
+        </div>
+    </div>
+    <div class="profile-section">
+        <section class="home-tuites">
+            <h3>Tuites by @{{ user.username }}</h3>
+            {% for tuite in user.tuites.all %}
+                <div class="tuite">
+                    <p>{{ tuite.content }}</p>
+                    <p class="date">{{ tuite.date_created }}</p>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
 </div>
 {% endblock %}

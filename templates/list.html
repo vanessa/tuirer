@@ -3,6 +3,13 @@
 {% block body %}
 <section class="home-tuites">
     <h3>Todos os tuites</h3>
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="message{% if message.tags %} {{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
     {% for tuite in tuites %}
         <div class="tuite">
             <p class="creator">@{{ tuite.creator }}</p>

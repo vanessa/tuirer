@@ -11,6 +11,18 @@ class PostTuiteForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        creator_id = self.initial['creator']
+        creator_id = self.initial.get('creator')
         self.fields['creator'].initial = User.objects.get(id=creator_id)
+        # Utilizamos o HiddenInput() porque não queremos que o usuário
+        # selecione quem é o criador do Tuite.
         self.fields['creator'].widget = forms.HiddenInput()
+
+    def clean_creator(self):
+        creator_chosen = self.cleaned_data.get('creator')
+        initial_creator = self.initial.get('creator')
+        # Abaixo usamos o id porque 
+        if creator_chosen.id != initial_creator:
+            raise forms.ValidationError(
+                'Você está tentando burlar o sistema!',
+                code='invalid')
+        return creator_chosen

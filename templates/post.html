@@ -1,10 +1,23 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
 {% block body %}
     <h2>Postar Tuite</h2>
-    <form method="post">
+
+    {% for error, message in form.errors.items %}
+        <div class="form-error">{{ message|striptags }}</div>
+    {% endfor %}
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="message{% if message.tags %} {{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post" class="post-tuite-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {% render_field form.content class="content" placeholder="O que você está pensando?" %}
+        {% render_field form.creator %}
         <input type="submit" value="Postar!">
     </form>
 {% endblock %}

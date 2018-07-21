@@ -16,6 +16,8 @@ body {
     margin: 0 auto;
 }
 
+/* Tuites */
+
 .tuite {
     padding: 10px;
     background: #fff;
@@ -37,6 +39,8 @@ body {
     font-weight: bold;
 }
 
+/* Menu */
+
 .menu-wrapper {
     background: #1DA1F2;
     padding: 15px;
@@ -57,6 +61,14 @@ body {
     text-shadow: 0 1px 3px rgba(0, 0, 0, .3);
 }
 
+.menu-inner nav {
+    font-size: .9em;
+}
+
+.menu-inner .user-info {
+    display: inline-block;
+}
+
 .menu-inner .site-name a {
     color: #fff;
     text-decoration: none;
@@ -65,4 +77,67 @@ body {
 .menu-inner nav a {
     color: #fff;
     padding: 0 15px;
+}
+
+
+/* Postar Tuite */
+
+.form-error {
+    color: rgb(220, 0, 0);
+    font-size: .9em;
+    margin: 15px 0;
+}
+
+.post-tuite-form {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.post-tuite-form .content {
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.post-tuite-form input[type="submit"] {
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 15px;
+    background: #1DA1F2;
+    color: #fff;
+    border: 0;
+}
+
+/* Mensagens */
+
+.message {
+    padding: 10px;
+    border: 2px dotted #1DA1F2;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.message.success {
+    border-color: limegreen;
+}
+
+/* Perfil do usuário */
+.user-profile .stats {
+    margin: 10px 0;
+    font-size: .9em;
+    color: #666;
+}
+
+.user-profile .user-info {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.user-profile .pic-column .profile-picture {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 50%;
 }
