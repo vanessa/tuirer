@@ -14,8 +14,9 @@ $ git clone git@github.com:vanessa/tuirer.git
 - [ ] Following e followers
 - [ ] Curtir um Tuite
 - [ ] LoginRequiredMixin nas views correspondentes
+- [ ] Deploy no Heroku
 
 ## Grupo no Telegram
-O grupo no Telegram serve para tirar dúvidas e manter a comunicação com os alunos do curso. Acesse [aqui](https://t.me/djangojornada).
+O grupo no Telegram serve para tirar dúvidas e manter a comunicação com os alunos do curso. Acesse [aqui](https://t.me/djangojc).
 
 [Pull requests](https://yangsu.github.io/pull-request-tutorial/) para qualquer adição e issues são bem vindos!
