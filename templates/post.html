@@ -8,11 +8,7 @@
         <div class="form-error">{{ message|striptags }}</div>
     {% endfor %}
 
-    {% if messages %}
-        {% for message in messages %}
-        <div class="message{% if message.tags %} {{ message.tags }}{% endif %}">{{ message }}</div>
-        {% endfor %}
-    {% endif %}
+    {% include 'includes/message.html' %}
 
     <form method="post" class="two-column-form">
         {% csrf_token %}

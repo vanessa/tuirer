@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from tuites.forms import PostTuiteForm
@@ -50,3 +50,20 @@ class SingleTuiteView(generic.DetailView):
     template_name = 'single_tuite.html'
     model = Tuite
     context_object_name = 'tuite'
+
+
+class LikeTuiteView(generic.RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        tuite_pk = kwargs.get('pk')
+        
+        # Passos para implementação da curtida:
+        # 1. Checar se o usuário está logado, isso pode ser,
+        #    feito usando LoginRequiredMixin
+        # 2. Checar se o usuário já curtiu ou não este Tuite,
+        #    e enviar mensagem de erro caso verdadeiro
+        # 3. Computar a curtida no Tuite
+
+        # A mensagem abaixo é serve para feedback
+        messages.success(self.request, 'Você curtiu este Tuite!')
+
+        return reverse('tuites:tuite', args=[tuite_pk])
