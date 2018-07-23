@@ -4,6 +4,7 @@ body {
     font-family: "Source Sans Pro", "Segoe UI", Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .site-header {
