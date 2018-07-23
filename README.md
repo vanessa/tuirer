@@ -16,6 +16,7 @@ $ git clone git@github.com:vanessa/tuirer.git
 - [ ] LoginRequiredMixin nas views correspondentes
 - [ ] Testes
 - [ ] Deploy no Heroku
+- [ ] Mudar foto de perfil
 
 ## Grupo no Telegram
 O grupo no Telegram serve para tirar dúvidas e manter a comunicação com os alunos do curso. Acesse [aqui](https://t.me/djangojc).
