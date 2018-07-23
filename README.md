@@ -1,5 +1,5 @@
 # Tuirer
-Este projeto foi ideado para o curso de Django da 28ª Jornada de Cursos, oferecida pelo CITi.
+Este projeto foi ideado para o curso de Django da 28ª Jornada de Cursos, oferecida pelo [CITi](https://github.com/citi-ufpe).
 
 ## Como utilizar
 * Clone o projeto para seu computador:
