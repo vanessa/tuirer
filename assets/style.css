@@ -16,6 +16,24 @@ body {
     margin: 0 auto;
 }
 
+.back-link {
+    color: #666;
+    margin-bottom: 15px;
+    display: block;
+}
+
+footer {
+    display: flex;
+    font-size: .7em;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    width: 750px;
+    margin: 0 auto;
+}
+
 /* Tuites */
 
 .tuite {
@@ -41,12 +59,58 @@ body {
 
 .tuite .creator a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .tuite .creator a:hover {
     text-decoration: underline;
     color: #1DA1F2;
+}
+
+.tuite .date a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tuite .date a:hover {
+    color: #1DA1F2;
+    text-decoration: underline;
+}
+
+/* Single tuite card */
+
+.tuite-card {
+    background: #fff;
+    padding: 15px;
+    position: relative;
+}
+
+.tuite-card p:not(:last-of-type) {
+    margin: 0 0 10px;
+}
+
+.tuite-card p:last-of-type {
+    margin: 0;
+}
+
+.tuite-card .content {
+    font-size: 1.4em;
+}
+
+.tuite-card .creator {
+    color: #333;
+}
+
+.tuite-card .date {
+    color: #666;
+}
+
+.like-tuite {
+    color: salmon;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    text-decoration: none;
 }
 
 /* Menu */
@@ -163,4 +227,17 @@ input {
     font-weight: 600;
     text-align: center; 
     font-size: 1.2em;
+}
+
+/* Form de cadastro */
+
+.helptext {
+    font-size: .8em;
+    color: #666;
+}
+
+.errorlist {
+    padding: 0;
+    list-style: none;
+    color: red;
 }

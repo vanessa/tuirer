@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-{{ tuite.content }}
+<a class="back-link" href="{% url 'tuites:list' %}">Voltar</a>
+    <div class="tuite-card">
+        <p class="content">{{ tuite.content }}</p>
+        <p class="creator">
+            <a href="{% url 'users:profile' tuite.creator.id %}">{{ tuite.creator.username }}</a>
+        </p>
+        <p class="date">{{ tuite.date_created }}</p>
+        <a href="#" class="like-tuite" onClick="alert('Cenas dos próximos capítulos...');"><i class="far fa-heart"></i> 0</a>
+    </div>
 {% endblock %}
