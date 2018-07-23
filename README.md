@@ -14,6 +14,7 @@ $ git clone git@github.com:vanessa/tuirer.git
 - [ ] Following e followers
 - [ ] Curtir um Tuite
 - [ ] LoginRequiredMixin nas views correspondentes
+- [ ] Testes
 - [ ] Deploy no Heroku
 
 ## Grupo no Telegram
