@@ -6,6 +6,7 @@
     
     <section class="home-tuites">
         <h3>Últimos 2 tuites</h3>
+        {% include 'includes/message.html' %}
         {% for tuite in tuites %}
             {% include 'includes/tuite.html' %}
         {% endfor %}

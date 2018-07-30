@@ -209,6 +209,17 @@ input {
     color: #666;
 }
 
+.user-profile .you-label {
+    display: inline-block;
+    border: 1px solid #c0c0c0;
+    background: #fafafa;
+    color: #666;
+    font-size: .6em;
+    padding: 1px 8px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
 .user-profile .user-info {
     margin-top: 15px;
     display: flex;
