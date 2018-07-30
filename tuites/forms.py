@@ -20,7 +20,9 @@ class PostTuiteForm(forms.ModelForm):
     def clean_creator(self):
         creator_chosen = self.cleaned_data.get('creator')
         initial_creator = self.initial.get('creator')
-        # Abaixo usamos o id porque 
+        # Abaixo usamos o id porque o formulrio, quando postado,
+        # retornar o objeto do usurio, diferente do parmetro que
+        # passamos para iniciar o formulrio, que foi o id
         if creator_chosen.id != initial_creator:
             raise forms.ValidationError(
                 'Você está tentando burlar o sistema!',
