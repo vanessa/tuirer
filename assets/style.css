@@ -41,6 +41,7 @@ footer {
     padding: 10px;
     background: #fff;
     margin: 15px 0;
+    position: relative;
 }
 
 .tuite p {

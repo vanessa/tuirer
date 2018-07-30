@@ -1,3 +1,4 @@
+{% load user_liked %}
 <div class="tuite">
     <p class="creator">
         <a href="{% url 'users:profile' tuite.creator.id %}">@{{ tuite.creator }}</a>
@@ -6,4 +7,7 @@
     <p class="date">
         <a href="{% url 'tuites:tuite' tuite.pk %}">{{ tuite.date_created }}</a>
     </p>
+    <a href="{% url 'tuites:like' tuite.id %}" class="like-tuite">
+        <i class="{% liked_tuite_heart_icon %}"></i> {{ tuite.likes_count }}
+    </a>
 </div>

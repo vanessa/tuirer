@@ -8,6 +8,8 @@ class User(AbstractUser):
     picture = models.ImageField('Foto de perfil', default='/img/blank-pic.png')
     created_at = models.DateTimeField(auto_now_add=True)
 
+    liked_tuites = models.ManyToManyField('tuites.Tuite', related_name='liked_by')
+
     @property
     def followers_count(self):
         return self.followers.count()

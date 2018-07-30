@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.views import generic
@@ -52,18 +53,41 @@ class SingleTuiteView(generic.DetailView):
     context_object_name = 'tuite'
 
 
-class LikeTuiteView(generic.RedirectView):
+class LikeTuiteView(LoginRequiredMixin, generic.RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         tuite_pk = kwargs.get('pk')
-        
+        tuite = Tuite.objects.get(pk=tuite_pk)
+
+        # Pega URL de onde o usuário fez a requisição
+        # https://stackoverflow.com/a/38525699/4526204
+        url = self.request.META.get('HTTP_REFERER')
+
         # Passos para implementação da curtida:
         # 1. Checar se o usuário está logado, isso pode ser,
-        #    feito usando LoginRequiredMixin
+        #    feito usando LoginRequiredMixin ☑️
         # 2. Checar se o usuário já curtiu ou não este Tuite,
-        #    e enviar mensagem de erro caso verdadeiro
-        # 3. Computar a curtida no Tuite
+        #    e descurtir caso verdadeiro ☑️
+        # 3. Computar a curtida/descurtida no Tuite ☑️
 
-        # A mensagem abaixo é serve para feedback
+        user_already_liked = self.request.user.liked_tuites.filter(
+            pk__in=[tuite_pk]).exists()
+
+        if user_already_liked:
+            # Remove o like do Tuite para o usuário
+            self.request.user.liked_tuites.remove(tuite)
+
+            # Mostra uma mensagem de feedback para o usuário
+            messages.success(
+                self.request,
+                'Você descurtiu o Tuite!'
+            )
+            return url
+
+        # Adiciona o Tuite aos likes do usuário
+        # se ele já não tiver curtido
+        self.request.user.liked_tuites.add(tuite)
+
+        # Mostra uma mensagem de feedback para o usuário
         messages.success(self.request, 'Você curtiu este Tuite!')
 
-        return reverse('tuites:tuite', args=[tuite_pk])
+        return url

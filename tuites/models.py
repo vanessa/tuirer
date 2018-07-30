@@ -12,6 +12,10 @@ class Tuite(models.Model):
     class Meta:
         ordering = ('-date_created', )
 
+    @property
+    def likes_count(self):
+        return self.liked_by.count()
+
     def __str__(self):
         return '@{author}: {content}'.format(
             author=self.creator.username,
