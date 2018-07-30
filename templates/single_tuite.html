@@ -3,5 +3,5 @@
 {% block body %}
 <a class="back-link" href="{% url 'tuites:list' %}">Voltar</a>
     {% include 'includes/message.html' %}
-    {% include 'includes/tuite.html' %}
+    {% include 'includes/tuite.html' with single_tuite=True %}
 {% endblock %}

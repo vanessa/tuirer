@@ -79,6 +79,22 @@ footer {
     text-decoration: underline;
 }
 
+.tuite .liked-avatars .small-avatar {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.liked-avatars .small-avatar:hover {
+    box-shadow: 0 0 0 2px #1DA1F2;
+}
+
+.tuite .liked-avatars a {
+    text-decoration: none;
+}
+
 /* Single tuite card */
 
 .tuite-card {

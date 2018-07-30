@@ -7,6 +7,16 @@
     <p class="date">
         <a href="{% url 'tuites:tuite' tuite.pk %}">{{ tuite.date_created }}</a>
     </p>
+    {# A variável single_tuite foi passada no include em single_tuite.html #}
+    {% if single_tuite %}
+        <div class="liked-avatars">
+            {% for user in tuite.liked_by.all %}
+            <a href="{% url 'users:profile' user.id %}">
+                <div class="small-avatar" style="background-image: url('{{ user.picture.url }}')"></div>
+            </a>
+            {% endfor %}
+        </div>
+    {% endif %}
     <a href="{% url 'tuites:like' tuite.id %}" class="like-tuite">
         <i class="{% liked_tuite_heart_icon %}"></i> {{ tuite.likes_count }}
     </a>
