@@ -12,7 +12,6 @@ $ git clone git@github.com:vanessa/tuirer.git
 ## A fazer
 > Não precisa entender isso, serve apenas para manter controle do que falta.
 - [ ] Following e followers
-- [x] Curtir um Tuite
 - [ ] LoginRequiredMixin nas views correspondentes
 - [ ] Testes
 - [ ] Deploy no Heroku
