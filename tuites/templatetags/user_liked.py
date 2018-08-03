@@ -10,6 +10,12 @@ def liked_tuite_heart_icon(context):
     """
     user = context.get('user')
     tuite = context.get('tuite')
+    solid_icon = "fas fa-heart"
+    empty_icon = "far fa-heart"
+
+    if not user.pk:
+        return empty_icon
     if not user.liked_tuites.filter(id__in=[tuite.id]).exists():
-        return "far fa-heart"
-    return "fas fa-heart"
+        return solid_icon
+
+    return empty_icon
