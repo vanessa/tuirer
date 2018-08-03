@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ -n "$AUTO_MIGRATE" ] && [ "$AUTO_MIGRATE" == 1 ]; then
+    echo "-----> Running manage.py migrate"
+    python manage.py migrate --noinput
+fi
+
+echo "-----> Post-compile hook finished"
