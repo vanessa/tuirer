@@ -18,4 +18,4 @@ Este projeto foi ideado para o curso de Django da 28ª Jornada de Cursos, oferec
 ## Grupo no Telegram
 O grupo no Telegram serve para tirar dúvidas e manter a comunicação com os alunos do curso. Acesse [aqui](https://t.me/djangojc).
 
-[Pull requests](https://yangsu.github.io/pull-request-tutorial/) para qualquer adição e issues são bem vindos!
+:sparkles: [Pull requests](https://yangsu.github.io/pull-request-tutorial/) para qualquer adição e issues são bem vindos!
