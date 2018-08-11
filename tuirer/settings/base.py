@@ -124,4 +124,3 @@ STATIC_ROOT = base_dir_join('assets')
 
 MEDIA_ROOT = base_dir_join('mediafiles')
 MEDIA_URL = '/media/'
-
