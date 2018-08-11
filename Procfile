@@ -1,1 +1,1 @@
-web: gunicorn tuirer.wsgi
+web: gunicorn tuirer.wsgi --log-file -
