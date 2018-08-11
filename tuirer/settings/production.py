@@ -2,9 +2,6 @@ from .base import *
 from decouple import config
 import django_heroku
 
-INSTALLED_APPS += ('django_storages', )
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-
 # Lembre-se de adicionar essas variáveis
 # em "Environment variables" do Heroku!
 DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN')
@@ -17,3 +14,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 django_heroku.settings(locals())
+
+INSTALLED_APPS += ('django_storages', )
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
