@@ -1,1 +1,1 @@
-web: gunicorn tuirer.wsgi --access-logfile - --log-level debug
+web: gunicorn tuirer.wsgi --access-logfile - --log-level info
