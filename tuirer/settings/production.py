@@ -15,4 +15,4 @@ EMAIL_USE_TLS = True
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
-django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False)
