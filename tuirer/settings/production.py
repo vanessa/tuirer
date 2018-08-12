@@ -13,7 +13,6 @@ EMAIL_HOST_PASSWORD = config('SENDGRID_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-INSTALLED_APPS += ('django_storages', )
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
 django_heroku.settings(locals())
