@@ -7,6 +7,7 @@ import dj_database_url
 # em "Environment variables" do Heroku!
 DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN')
 DROPBOX_ROOT_PATH = config('DROPBOX_ROOT_PATH')
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
 DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'), conn_max_age=600)
 
@@ -16,4 +17,3 @@ EMAIL_HOST_PASSWORD = config('SENDGRID_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
