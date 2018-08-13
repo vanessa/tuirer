@@ -9,6 +9,8 @@ DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN')
 DROPBOX_ROOT_PATH = config('DROPBOX_ROOT_PATH')
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
+ALLOWED_HOSTS = ['.herokuapp.com']
+
 DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'), conn_max_age=600)
 
 EMAIL_HOST = 'smtp.sendgrid.net'
