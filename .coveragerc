@@ -1,0 +1,7 @@
+[run]
+omit = */venv/*
+       */migrations/*
+       */settings/*
+       */tests/*
+       manage.py
+       */__init__.py

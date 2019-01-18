@@ -8,7 +8,7 @@ from tuites.forms import PostTuiteForm
 from tuites.models import Tuite
 
 
-class PostTuiteView(generic.CreateView):
+class PostTuiteView(LoginRequiredMixin, generic.CreateView):
     template_name = 'post.html'
     model = Tuite
     form_class = PostTuiteForm

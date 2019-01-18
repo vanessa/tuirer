@@ -3,3 +3,7 @@ db.sqlite3
 mediafiles/
 venv/
 __pycache__/
+
+# Coverage
+.coverage
+htmlcov/
