@@ -10,7 +10,7 @@
             <a href="{% url 'tuites:list' %}">Tuites</a>
             <a href="{% url 'users:profile' user.pk %}">Meu Perfil</a>
             <a href="{% url 'tuites:search' %}">Buscar</a>
-            <div class="user-info">Olá, <b>{{ user.username }}</b>!</div>
+            <div class="user-info">Olá, <b>{{ request.user.username }}</b>!</div>
             <a href="{% url 'users:logout' %}">Sair</a>
             {% else %}
             <a href="{% url 'users:login' %}">Entrar</a>
